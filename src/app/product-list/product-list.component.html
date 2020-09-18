@@ -1,27 +1,19 @@
 <h2>Products</h2>
 
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->
-
 <div class="productList">
 
-<div class="productBox" *ngFor="let product of products; index as productId">
-  <h3><a [title]="product.name + ' details'" [routerLink]="['/products', productId]">{{ product.name }}</a></h3> 
- 
-  <p>
-    <span *ngIf="product.description">{{ product.description }}</span> 
-    <span *ngIf="product.price"> // {{ product.price | currency }}</span>
-  </p>
- 
-  <button (click)="share()">Share</button>
+  <div class="productBox" *ngFor="let product of products; index as productId">
+    <h3><a [title]="product.name + ' details'" [routerLink]="['/products', productId]">{{ product.name }}</a></h3>
 
-  <app-product-alerts
-    [product]="product"
-    (notify)="onNotify()">
-  </app-product-alerts>
-</div>
+    <p>
+      <span *ngIf="product.description">{{ product.description }}</span>
+      <span *ngIf="product.price"> // {{ product.price | currency }}</span>
+    </p>
+
+    <button (click)="share()">Share</button>
+
+    <app-product-alerts [product]="product" (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
 
 </div>

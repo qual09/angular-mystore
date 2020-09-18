@@ -17,7 +17,7 @@ body {
   flex-direction: row;
 }
 
-router-outlet + *  {
+router-outlet+* {
   padding: 0 16px;
 }
 
@@ -70,6 +70,7 @@ label {
 }
 
 /* Button */
+
 .button, button {
   display: inline-flex;
   align-items: center;

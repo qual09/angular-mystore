@@ -34,7 +34,7 @@ import { ShippingComponent } from './shipping/shipping.component';
     CartComponent,
     ShippingComponent,
   ],
-  bootstrap: [ AppComponent ],
+  bootstrap: [AppComponent],
   providers: [CartService]
 })
 export class AppModule { }
